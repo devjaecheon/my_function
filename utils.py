@@ -15,3 +15,12 @@ def factorial(x):
 def gugudan(x):
     for i in range(9):
         print((i + 1) * x)
+
+
+def hanoi(n, f, t, via):
+    if n == 1:
+        print(str(f) + " -> " + str(t))
+    else:
+        hanoi(n - 1, f, via, t)
+        print(str(f) + " -> " + str(t))
+        hanoi(n - 1, via, t, f)
